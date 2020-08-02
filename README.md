@@ -1,6 +1,8 @@
 # How to run app(Instructions)
 
 
+## All requirements have been met. 
+
 ## Backend 
 
 - python -m venv env
