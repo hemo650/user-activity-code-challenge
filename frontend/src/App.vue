@@ -1,46 +1,29 @@
 <template>
   <div id="app">
-    <router-view :users="users" :columnNames="columnNames"/>
-
-    <PageButton/>
+    <div id="nav">
+      <router-link to="/page1">Table 1</router-link> |
+      <router-link to="/page2">Table 2</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-  // Imports for Pages and axios fetch
-  import axios from 'axios'
-  import PageButton from './components/PageButton'
-  // API URL for User Data Fetch
-  const API_URL = "http://localhost:8000/users"
-  // Export App
-  export default {
-    name: 'App',
-    components: {
-      PageButton
-    },
-    data( ) {
-      return {
-        users: { },
-        columnNames: ["ID", "Username", "Last Login", "Login Count", "Project Count"]
-      }
-    },
-    mounted( ) {
-      // Axios fetch data on component mount
-      axios.get(API_URL)
-        .then(res => {
-          this.users = res.data;
-        }).catch(err => {console.log(err)})
-    }
-  }
-</script>
-
 <style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-    text-align: center;
-    margin-top: 60px;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
