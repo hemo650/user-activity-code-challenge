@@ -1,7 +1,7 @@
 # How to run app(Instructions)
 
 
-## All requirements have been met. 
+## All requirements have been completed. 
 
 ## Backend 
 
