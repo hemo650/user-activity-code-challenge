@@ -1,3 +1,27 @@
+# How to run app(Instructions)
+
+
+## Backend 
+
+- python -m venv env
+- source env/bin/activate 
+- pip install -r requirements.txt
+- cd backend/
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver
+
+
+# Frontend
+
+- cd frontend/ 
+- npm install
+- npm run serve
+
+
+
+
+
 # User Activity Monitor (Frontend)
 
 ## Resources
